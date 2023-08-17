@@ -1,0 +1,76 @@
+.whatwedo-desc {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0 40px;
+    &-img {
+        width: 100%;
+    }
+    &-dropdown {
+        width: 100%;
+        &-btn {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .fa.fa-camera {
+                font-size: 30px;
+                color: $third-color;
+            }
+            .fa-angle-down {
+                margin-left: auto;
+                font-size: 30px;
+                color: $third-color;
+            }
+        }
+        &-title {
+            text-transform: uppercase;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+        &-text {
+            width: 100%;
+            display: block;
+        }
+        &-block {
+            border: 1px solid $third-color;
+            margin-bottom: 10px;
+        }
+        &-text {
+            padding: 10px;
+            border-top: 1px solid $third-color;
+            max-height: 240px;
+            overflow-y: auto;
+        }
+        /* width */
+        &-text::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        /* Track */
+        &-text::-webkit-scrollbar-track {
+            background: $gray-light-color; 
+            border-radius: 3px;
+        }
+        
+        /* Handle */
+        &-text::-webkit-scrollbar-thumb {
+            background: $gray-dark-color; 
+            
+        }
+        
+        /* Handle on hover */
+        &-text::-webkit-scrollbar-thumb:hover {
+            background: $gray-color; 
+        }
+
+    }
+}
+@media screen and (max-width:768px) {
+    .whatwedo-desc {
+        display: unset;
+    }
+    .whatwedo-desc-img {
+        margin-bottom: 10px;
+    }
+}

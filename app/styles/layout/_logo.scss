@@ -1,0 +1,15 @@
+.logo {
+    background-color: $gray-light-color;
+    .container {
+        text-align: center;
+        padding: 50px 300px;
+        img {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .logo .container {
+        padding: 50px 10px;
+    }
+}

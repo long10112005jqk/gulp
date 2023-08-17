@@ -1,0 +1,29 @@
+header.header
+  .container 
+    .header-top 
+      a(class="header-logo" href="#") Mogo
+      i.fa.fa-sliders-h
+      ul.header-list 
+        +headerItems("#","home")
+        +headerItems("#","about")
+        +headerItems("#","service")
+        +headerItems("#","our team")
+        +headerItems("#","work")
+        +headerItems("#","blog")
+        li.header-item 
+          a(href="#") 
+            i.fa.fa-shopping-cart
+        li.header-item 
+          a(href="#")
+            i.fa.fa-search.btn-toggle
+    .header-content
+      h2.header-titlesmall creative template
+      h1.header-titlebig welcome to mogo 
+      div.header-btn learn more 
+    .header-bottom 
+      div.header-slider
+        +headerSliderInner("01","intro")
+        +headerSliderInner("01","intro")
+        +headerSliderInner("01","intro")
+        +headerSliderInner("01","intro")
+    

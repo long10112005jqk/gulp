@@ -1,0 +1,71 @@
+.outwork-block {
+    display: grid;
+    grid-template-areas: "one two third four"
+                        "five six third eight";
+    .outword-block-item {
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+        .outword-block-title {
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .outword-block-text {
+            font-size: 15px;
+            font-style: italic;
+        }
+    }
+    @include hoverEffect(".outword-block-item",".outword-block-info","false");
+    .outword-block-item:nth-child(1) {
+        grid-area: one;
+    }
+    .outword-block-item:nth-child(2) {
+        grid-area: two;
+    }
+    .outword-block-item:nth-child(5) {
+        grid-area: third;
+    }
+    .outword-block-item:nth-child(4) {
+        grid-area: six;
+    }
+    .outword-block-item:nth-child(3) {
+        grid-area: five;
+    }
+    .outword-block-item:nth-child(6) {
+        grid-area: four;
+    }
+    .outword-block-item:nth-child(7) {
+        grid-area: eight;
+    }
+}
+.outwork {
+    .container {
+        padding: 0 300px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .outwork .container {
+        padding: 0;
+    }
+}
+@media screen and (max-width:414px) {
+    .outwork-block {
+        grid-template-areas: "one two"
+                            "five six"
+                            "third four"
+                            "third eight";
+    }
+    .outwork-block .outword-block-item .outword-block-info {
+        text-align: center;
+    }
+    .outwork-block .outword-block-item .outword-block-title {
+        font-size: 13px;
+    }
+    .outwork-block .outword-block-item .outword-block-text {
+        font-size: 12px;
+    }
+    .outwork-block .outword-block-item .outword-block-info .fa {
+        font-size: 24px;
+    }
+}

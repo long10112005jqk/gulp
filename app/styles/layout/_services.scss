@@ -1,0 +1,39 @@
+.services-block {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    &-item {
+        display: flex;
+        padding-right: 20px;
+        .fa {
+            padding: 0 20px;
+            color: $third-color;
+            font-size: 30px;
+        }
+    }
+    &-item:nth-child(n + 4) {
+        padding-top: 50px;
+    }
+    &-item:nth-child(-n + 3) {
+        border-bottom: 1px solid $gray-dark-color;
+        padding-bottom: 50px;
+    }
+    &-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    &-desc {
+        color: $gray-color;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .services-block .services-block-item {
+        padding: 30px 0 30px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid $gray-dark-color;
+        }
+    }
+    .services-block {
+        display: unset;
+    }
+}

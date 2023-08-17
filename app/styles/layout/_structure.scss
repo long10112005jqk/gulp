@@ -1,0 +1,49 @@
+.headerBlock {
+    text-align: center;
+    padding: 100px 0 50px 0;
+    .header-titlesmall {
+        font-family: $third-font;
+        font-size: 28px;
+    }
+    .header-titlebig {
+        font-family: $primary-font;
+        font-size: 40px;
+        font-weight: 900;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        &::after {
+            content:"";
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: $primary-color;
+            position: absolute;
+        }
+    }
+    .header-content {
+        color: $gray-color;
+        line-height: 1.4;
+        font-weight: bold;
+        padding: 0 175px;
+    }
+}
+.container {
+    padding: 0 300px 100px 300px;
+}
+@media screen and (max-width:1024px){
+    .container {
+        padding: 0 0 100px 0;
+    }
+    
+}
+@media screen and (max-width:414px) {
+    .headerBlock {
+        padding: 50px 0;
+    } 
+    .container {
+        padding: 0;
+    }
+}

@@ -1,0 +1,27 @@
+.blockimg {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0px 30px;
+    @include hoverEffect(".blockimg-item",".blockimg-info")
+}
+@media screen and (max-width:1024px) {
+    .story {
+        padding: 0;
+        
+    }
+    .headerBlock .header-content {
+        padding: 0 80px;
+    }
+}
+@media screen and (max-width:414px) {
+    .headerBlock .header-titlebig {
+        font-size: 32px;
+    }
+    .headerBlock .header-content {
+        padding: 0 10px;
+    }
+    .blockimg {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+}

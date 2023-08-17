@@ -1,0 +1,82 @@
+.cmtpp {
+    width: 100%;
+    background-color: $gray-light-color;
+    color: $gray-dark-color;
+    .container {
+        display: flex;
+        align-items: center;
+        padding: 100px 300px;
+        .fa-arrow-right {
+            margin-left: auto;
+        }
+        .fa {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+    &-desc {
+        display: flex;
+        padding-left: 50px;
+        align-items: center;
+        &-img {
+            img {
+                padding: 5px;
+                border-radius: 50%;
+                border: 1px solid $gray-color;
+                width: 300px;
+            }
+        }
+        &-info {
+            font-size: 20px;
+            padding-left: 20px;
+            font-style: italic;
+            color: $gray-color;
+        }
+        &-user {
+            text-transform: capitalize;
+            font-family: $third-font;
+            font-size: 22px;
+            position: relative;
+            padding-left: 60px;
+            margin-top: 20px;
+            &::after {
+                content:"";
+                position:absolute;
+                top:50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 2px;
+                background-color: $third-color;
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    .cmtpp .container {
+        padding: 100px;
+    }
+}
+@media screen and (max-width:768px){
+    .cmtpp-desc {
+        padding-left: 0;
+    }
+    .cmtpp-desc-img {
+        display: none;
+    }
+}
+@media screen and (max-width:414px){
+    .cmtpp .container {
+        padding: 20px 6px;
+    }
+    .cmtpp-desc-info {
+        font-size: 13px;
+    }
+    .cmtpp-desc-user {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .cmtpp .container .fa {
+        font-size: 23px;
+    }
+}

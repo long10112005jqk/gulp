@@ -1,0 +1,96 @@
+.comment {
+    width: 100%;
+    background-color: $gray-light-color;
+    color: $gray-dark-color;
+    padding: 100px 300px;
+    .show {
+        display: flex;
+        animation: slide 0.5s linear; 
+    }
+    @keyframes slide {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+        .fa-arrow-right {
+            margin-left: auto;
+        }
+        .fa {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+    &-desc {
+        display: flex;
+        padding-left: 50px;
+        display: none;
+        &-icon {
+            .fa.fa-comment {
+                border: 2px solid $third-color;
+                color: $third-color;
+                padding: 20px;
+                font-size: 70px;
+            }
+        }
+        &-info {
+            font-size: 20px;
+            padding-left: 20px;
+            font-style: italic;
+            color: $gray-color;
+        }
+        &-user {
+            text-transform: capitalize;
+            font-family: $third-font;
+            font-size: 22px;
+            position: relative;
+            padding-left: 60px;
+            margin-top: 20px;
+            &::after {
+                content:"";
+                position:absolute;
+                top:50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 2px;
+                background-color: $third-color;
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    .comment .container {
+        padding: 100px;
+    }
+}
+@media screen and (max-width:768px){
+    .comment-desc {
+        padding-left: 0;
+    }
+    .comment-desc-icon {
+        display: none;
+    }
+}
+@media screen and (max-width:414px){
+    .comment .container {
+        padding: 20px 6px;
+    }
+    .comment-desc-info {
+        font-size: 13px;
+    }
+    .comment-desc-user {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .comment .container .fa {
+        font-size: 23px;
+    }
+}

@@ -1,0 +1,76 @@
+.peoplesay {
+    background:linear-gradient(to bottom,rgba(white,0.7),rgba(white,0.7)), url('../images/img-device-bg.png') no-repeat center/cover;
+}
+.peoplesay-block {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    &-item {
+        width: calc((100% - 30px));
+        display: flex;
+        &:nth-child(even) {
+            margin-left: 30px;
+        }
+        &:nth-child(n + 3) {
+            margin-top: 40px;
+        }
+    }
+    &-avt {
+        max-width: 40%;
+        min-width: 20%;
+    }
+    &-info {
+        padding-left: 20px;
+    }
+    &-name {
+        font-size: 18px;
+    }
+    &-work {
+        font-style: italic;
+        color: $gray-color;
+        font-weight: bold;
+        position: relative;
+        &::after {
+            content:"";
+            position: absolute;
+            bottom: -13px;
+            left: 0;
+            width: 70px;
+            height: 2px;
+            background-color: $primary-color;
+        }
+    }
+    &-text {
+        margin-top: 20px;
+        font-weight: bold;
+        color: $gray-color;
+    }
+}
+@media screen and (max-width:1024px) {
+    .peoplesay-block {
+        padding: 0 80px;
+    }
+    .peoplesay-block-avt {
+        width: 100%;
+    }
+}
+@media screen and (max-width:414px) {
+    .peoplesay .headerBlock {
+        padding-bottom: 0;
+    }
+    .peoplesay-block {
+        display: unset;
+        &-item {
+            width: 100%;
+        }
+        &-item:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+    .peoplesay-block-item:nth-child(2n) {
+        margin-left: 0;
+    }
+    .peoplesay-block-text {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,40 @@
+mixin headerItems($link,$content) 
+	li.header-item
+		a(href= $link)= $content
+
+mixin headerSliderInner($number,$title)
+	div.header-slider-inner
+		span.header-slider-number= $number
+		span.header-slider-title= $title
+
+mixin headerBlock($titlesmall,$titlebig,$content)
+	div.headerBlock
+		h3.header-titlesmall= $titlesmall
+		h2.header-titlebig= $titlebig
+		if $content
+			p.header-content= $content
+mixin coutInfo($number,$text)
+	div.cout-info 
+		h1.cout-info-number= $number 
+		p.cout-info-text= $text
+mixin serviceBlock($link,$title,$desc)
+	div.services-block-item 
+		i.fa(class= $link)
+		div.services-block-text 
+			.services-block-title= $title
+			.services-block-desc= $desc 
+mixin outworkBlock($src,$title,$text)
+	div.outword-block-item 
+		img(class="outwork-img" src= $src)
+		div.outword-block-info 
+			i.fa.fa-home 
+			h3.outword-block-title= $title 
+			p.outword-block-text= $text
+mixin peopleitem($src,$name,$work,$text)
+	div.peoplesay-block-item 
+		div.peoplesay-block-avt
+			img(src= $src)
+		div.peoplesay-block-info 
+			h3.peoplesay-block-name= $name
+			span.peoplesay-block-work= $work
+			p.peoplesay-block-text= $text

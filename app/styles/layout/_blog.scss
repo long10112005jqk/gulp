@@ -1,0 +1,123 @@
+.blog-block {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        width: calc((100% - 60px) / 3);
+        position: relative;
+    }
+    img {
+        width: 100%;
+    }
+    &-title {
+        font-size: 18px;
+        color: #2ec06c;
+        margin: 10px 0;
+        display: inline-block;
+        transition: 0.3s linear;
+        &:hover {
+            color: black;
+        }
+    }
+    &-text {
+        color: $gray-color;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $gray-dark-color;
+        padding-bottom: 30px;
+        font-style: italic;
+    }
+    &-info {
+        display: flex;
+        font-size: 15px;
+        a {
+            color: $third-color;
+        }
+        a:hover {
+            .blog-block-number {
+                color: black;
+            }
+        }
+    }
+    &-cmt {
+        margin-left: 15px;
+    }
+    &-number {
+        font-style: italic;
+        margin-left: 3px;
+        transition: 0.3s linear;
+    }
+    &-time {
+        text-align: center;
+        background-color: $third-color;
+        color: white;
+        display: inline-block;
+        padding: 13px 18px;
+        position: absolute;
+        top: 40%;
+        left: -2%;
+    }
+    &-day {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+    }
+    &-month {
+        font-style: italic;
+        text-transform: capitalize;
+    }
+}
+@media screen and (max-width:1024px) {
+    .blog-block-time {
+        top: 25%;
+        left: 0;
+        padding: 10px;
+    }
+    .blog-block-text {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+}
+@media screen and (max-width:768px) {
+    .blog-block-time {
+        top: 20%;
+        padding: 6px;
+    }
+    .blog-block-day {
+        font-size: 20px;
+    }
+    .blog-block-month {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:414px) {
+    .blog-block {
+        display: unset;
+        .blog-block-item {
+            width: 100%;
+        }
+        .blog-block-item:not(:first-child) {
+            margin-top: 20px;
+        }
+        .blog-block-time {
+            padding: 13px 18px;
+            top: 40%;
+        }
+        .blog-block-day {
+            font-size: 30px;
+        }
+        .blog-block-month {
+            font-size: 16px;
+        }
+        .blog-block-info {
+            padding-left: 10px;
+        }
+    }
+}
+@media screen and (max-width:375px) {
+    .blog-block .blog-block-day {
+        font-size: 25px;
+    }
+    .blog-block .blog-block-time {
+        top: 30%;
+
+    }
+}

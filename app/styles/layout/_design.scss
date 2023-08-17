@@ -1,0 +1,13 @@
+.design {
+    .container {
+        padding-bottom: 0;
+    }
+    background:linear-gradient(to bottom,rgba(white,0.7),rgba(white,0.7)), url('../images/img-device-bg.png') no-repeat center/cover;
+    img {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%,0);
+        margin-bottom: -98px;
+        display: inline-block;
+    }
+}
