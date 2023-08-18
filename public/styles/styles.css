@@ -6,6 +6,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  padding: 0 220px 100px 220px;
+}
+
 .headerBlock {
   text-align: center;
   padding: 100px 0 50px 0;
@@ -41,10 +45,6 @@ body {
   padding: 0 175px;
 }
 
-.container {
-  padding: 0 300px 100px 300px;
-}
-
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 0 100px 0;
@@ -65,7 +65,7 @@ body {
   background: linear-gradient(to bottom, rgba(233, 131, 130, 0.8), rgba(238, 216, 137, 0.8)), url("../images/header-bg.jpg") no-repeat center/cover;
 }
 .header .container {
-  padding: 0 300px;
+  padding: 0 220px;
 }
 .header .container .header-top {
   display: -webkit-box;
@@ -149,7 +149,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1;
-  padding: 0 300px 30px 300px;
+  padding: 0 230px 30px 230px;
   position: relative;
 }
 .header .container .header-content .header-titlebig:after {

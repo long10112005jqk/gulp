@@ -8,7 +8,7 @@
         ),
     url("../images/header-bg.jpg") no-repeat center / cover;
     .container {
-        padding:0 300px;
+        padding:0 220px;
         .header-top {
             display: flex;
             flex-direction: row;
@@ -68,7 +68,7 @@
                 text-transform: uppercase;
                 font-weight: bold;
                 line-height: 1;
-                padding: 0 300px 30px 300px;
+                padding: 0 230px 30px 230px;
                 position: relative;
                 &:after {
                     content:"";
